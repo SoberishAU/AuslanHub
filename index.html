@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Auslan Social Hub – Melbourne CBD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Optional: smoother font look */
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black">
+
+  <!-- HEADER -->
+  <header class="bg-neutral-900 text-white py-10">
+    <div class="max-w-6xl mx-auto flex items-center gap-6 px-6">
+      
+      <!-- Logo placeholder -->
+      <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center text-neutral-900 font-bold">
+        LOGO
+      </div>
+
+      <!-- Title -->
+      <div>
+        <h1 class="text-3xl font-extrabold tracking-wide">
+          AUSLAN SOCIAL HUB
+        </h1>
+        <p class="text-sm tracking-widest opacity-80">
+          MELBOURNE CBD
+        </p>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- INTEREST GROUPS -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      
+      <h2 class="text-4xl font-bold mb-12 tracking-wide">
+        INTEREST GROUPS
+      </h2>
+
+      <!-- Groups Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 place-items-center">
+
+        <!-- Group Card -->
+        <div class="max-w-xs">
+          <div class="w-32 h-32 bg-neutral-800 rounded-full mx-auto mb-4"></div>
+          <h3 class="font-bold text-lg">GROUP 1</h3>
+          <p class="text-xs text-neutral-600 mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia ante augue, viverra suscipit turpis.
+          </p>
+        </div>
+
+        <div class="max-w-xs">
+          <div class="w-32 h-32 bg-neutral-800 rounded-full mx-auto mb-4"></div>
+          <h3 class="font-bold text-lg">GROUP 2</h3>
+          <p class="text-xs text-neutral-600 mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia ante augue, viverra suscipit turpis.
+          </p>
+        </div>
+
+        <div class="max-w-xs">
+          <div class="w-32 h-32 bg-neutral-800 rounded-full mx-auto mb-4"></div>
+          <h3 class="font-bold text-lg">GROUP 3</h3>
+          <p class="text-xs text-neutral-600 mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia ante augue, viverra suscipit turpis.
+          </p>
+        </div>
+
+        <div class="max-w-xs">
+          <div class="w-32 h-32 bg-neutral-800 rounded-full mx-auto mb-4"></div>
+          <h3 class="font-bold text-lg">GROUP 4</h3>
+          <p class="text-xs text-neutral-600 mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia ante augue, viverra suscipit turpis.
+          </p>
+        </div>
+
+        <div class="max-w-xs">
+          <div class="w-32 h-32 bg-neutral-800 rounded-full mx-auto mb-4"></div>
+          <h3 class="font-bold text-lg">GROUP 5</h3>
+          <p class="text-xs text-neutral-600 mt-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia ante augue, viverra suscipit turpis.
+          </p>
+        </div>
+		
+		<div class="max-w-xs">
+		  <div class="w-32 h-32 bg-neutral-800 rounded-full mx-auto mb-4"></div>
+		  <h3 class="font-bold text-lg">GROUP 6</h3>
+		  <p class="text-xs text-neutral-600 mt-2">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacinia ante augue, viverra suscipit turpis.
+		  </p>
+		</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING EVENTS -->
+<section class="py-16">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-8 text-center tracking-wide">
+      UPCOMING EVENTS
+    </h2>
+
+    <div id="events"
+         class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    </div>
+  </div>
+</section>
+
+  <!-- CONTACT -->
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8 tracking-wide">
+        CONTACT
+      </h2>
+
+       <form 
+    action="https://docs.google.com/forms/d/e/1FAIpQLSeoyNPFuB0QSEESAoLUBW0BQs80MEOC2tk3qzkXDcx8ZfuXtQ/formResponse" 
+    method="POST" 
+    target="_blank" 
+    class="bg-white p-8 rounded-xl shadow-lg w-full max-w-md space-y-6"
+  >
+    <h2 class="text-2xl font-bold text-gray-800 text-center">Contact Us</h2>
+
+    <!-- Name -->
+    <div>
+      <label for="name" class="block text-gray-700 font-medium mb-1">Name</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="entry.123456789" 
+        class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required
+      >
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label for="email" class="block text-gray-700 font-medium mb-1">Email</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="entry.987654321" 
+        class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required
+      >
+    </div>
+
+    <!-- Message -->
+    <div>
+      <label for="message" class="block text-gray-700 font-medium mb-1">Message</label>
+      <textarea 
+        id="message" 
+        name="entry.1122334455" 
+        rows="4" 
+        class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        required
+      ></textarea>
+    </div>
+
+    <button 
+      type="submit" 
+      class="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"
+    >
+      Send Message
+    </button>
+  </form>
+    </div>
+  </section>
+
+</body>
+</html>
+<!--"A4AMT6T56QUOCCKZBJAM" -->
+
+<script>
+const ORGANIZER_ID = "120792215836";
+const TOKEN = "A4AMT6T56QUOCCKZBJAM";
+
+fetch(`https://www.eventbriteapi.com/v3/organizers/${ORGANIZER_ID}/events/?status=live&order_by=start_asc`, {
+  headers: {
+    "Authorization": `Bearer ${TOKEN}`
+  }
+})
+.then(res => res.json())
+.then(data => {
+  const container = document.getElementById("events");
+
+  if (!data.events || data.events.length === 0) {
+    container.innerHTML = `<p class="text-center col-span-full">No upcoming events</p>`;
+    return;
+  }
+
+  data.events.forEach((event, index) => {
+    if (index >= 6) return;
+    const date = new Date(event.start.local).toLocaleString("en-AU", {
+      weekday: "short",
+      day: "numeric",
+      month: "short",
+      hour: "numeric",
+      minute: "2-digit"
+    });
+
+	const location = event.online_event
+  ? "Online event"
+  : event.venue?.address?.localized_address_display || "Location TBA";
+  
+    container.innerHTML += `
+      <a href="${event.url}" target="_blank"
+         class="block bg-neutral-900 text-white p-5 rounded-lg hover:bg-neutral-800 transition">
+        <h3 class="font-bold text-lg mb-2">${event.name.text}</h3>
+        <p class="text-sm opacity-80">${date}</p>
+		
+        <p class="text-sm mt-2 opacity-70">
+          ${event.summary || ""}
+        </p>
+      </a>
+    `;
+  });
+})
+.catch(() => {
+  document.getElementById("events").innerHTML =
+    `<p class="text-center col-span-full">Unable to load events</p>`;
+});
+</script>
