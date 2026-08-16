@@ -189,32 +189,47 @@ fetch(`https://www.eventbriteapi.com/v3/organizers/${ORGANIZER_ID}/events/?statu
     return;
   }
 
-  data.events.forEach((event, index) => {
-    if (index >= 6) return;
-    const date = new Date(event.start.local).toLocaleString("en-AU", {
-      weekday: "short",
-      day: "numeric",
-      month: "short",
-      hour: "numeric",
-      minute: "2-digit"
-    });
+  // Sort events by start date/time, earliest first
+  data.events
+    .sort((a, b) => new Date(a.start.local) - new Date(b.start.local))
+    .slice(0, 6)
+    .forEach(event => {
 
-	const location = event.online_event
-  ? "Online event"
-  : event.venue?.address?.localized_address_display || "Location TBA";
-  
-    container.innerHTML += `
-      <a href="${event.url}" target="_blank"
-         class="block bg-[#111A28] text-white p-5 rounded-lg hover:bg-neutral-800 transition">
-        <h3 class="font-bold text-lg mb-2">${event.name.text}</h3>
-        <p class="text-sm opacity-80">${date}</p>
-		
-        <p class="text-sm mt-2 opacity-70">
-          ${event.summary || ""}
-        </p>
-      </a>
-    `;
-  });
+      const date = new Date(event.start.local).toLocaleString("en-AU", {
+        weekday: "short",
+        day: "numeric",
+        month: "short",
+        hour: "numeric",
+        minute: "2-digit"
+      });
+
+      const location = event.online_event
+        ? "Online event"
+        : event.venue?.address?.localized_address_display || "Location TBA";
+
+      container.innerHTML += `
+        <a href="${event.url}" target="_blank"
+           class="block bg-[#111A28] text-white p-5 rounded-lg hover:bg-neutral-800 transition">
+
+          <h3 class="font-bold text-lg mb-2">
+            ${event.name.text}
+          </h3>
+
+          <p class="text-sm opacity-80">
+            ${date}
+          </p>
+
+          <p class="text-sm mt-1 opacity-70">
+            ${location}
+          </p>
+
+          <p class="text-sm mt-2 opacity-70">
+            ${event.summary || ""}
+          </p>
+
+        </a>
+      `;
+    });
 })
 .catch(() => {
   document.getElementById("events").innerHTML =
