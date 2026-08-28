@@ -203,7 +203,7 @@
 const ORGANIZER_ID = "120792215836";
 const TOKEN = "A4AMT6T56QUOCCKZBJAM";
 
-fetch(`https://www.eventbriteapi.com/v3/organizers/${ORGANIZER_ID}/events/?status=live&order_by=start_asc`, {
+fetch(`https://www.eventbriteapi.com/v3/organizers/${ORGANIZER_ID}/events/?status=live&order_by=start_asc&expand=venue`, {
   headers: {
     "Authorization": `Bearer ${TOKEN}`
   }
@@ -230,10 +230,12 @@ fetch(`https://www.eventbriteapi.com/v3/organizers/${ORGANIZER_ID}/events/?statu
         hour: "numeric",
         minute: "2-digit"
       });
-
+		
+		
+	  console.log(event.venue);
       const location = event.online_event
         ? "Online event"
-        : event.venue?.address?.localized_address_display || "Location TBA";
+        :  event.venue.name || "Location TBA";
 
       container.innerHTML += `
         <a href="${event.url}" target="_blank"
